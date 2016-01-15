@@ -11,8 +11,33 @@ package alfabetonascosto;
  */
 
 public class Alfabeto {
-  
-
-  
+        //Archivio dell"alfabeto latin -- array di stringhe
+        static final String[] alf1 = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","w","x","y","x"," "};
+        //Archivo lettere alfabeto nuovo -- array di stringhe
+        static final String[] alf2 = {"x","-","_","_-","/-","/_","-_","-_-","/.",".","-./","_.-","..","__","0","_/","0.","/0","$","€","_..","<>","/._","_0.","x.","##"};
+        
+        
+        public static void codifica(String inserito){
+            //dichiarazione di stringhe per output e confronto
+            String out = "";
+            String confronto;
+            
+            //dichiarazione di iteratori i,j
+            int i,j;
+            
+            //ciclo per caratteri di inserito
+            for(i = 0;i<inserito.length();i++){
+            //ciclo per elementi di alf1
+                for(j=0;j<alf1.length;j++){
+                    //confronta il carattere di inserito in posizione i con ogni posizione di alf1
+                    if(inserito.charAt(i) == (char)alf1[j].charAt(0)){
+                        //aggiunge alla stringa out la posizione j di alf2
+                        out = out+alf2[j]+"    #    ";
+                        break;
+                    }
+                }
+            }  
+            System.out.println(out);
+        }
   
 }
