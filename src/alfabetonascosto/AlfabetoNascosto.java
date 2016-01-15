@@ -52,26 +52,7 @@ public class AlfabetoNascosto {
         }
         
         System.out.println(out);
-
-
-
-//Inserimento della scelta Conversione
-
-
-
     
-   
-       
-                                 
-                                 
-
-                        
-                  
-                  
-                
-           
-              
-        
     }
     
 }
