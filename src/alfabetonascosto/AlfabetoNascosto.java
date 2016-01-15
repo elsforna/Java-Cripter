@@ -43,7 +43,8 @@ public class AlfabetoNascosto {
             for(j=0;j<alf1.length;j++){
                 //potrebbe dare ebola
                 if(inserito.charAt(i) == (char)alf1[j].charAt(0)){
-                    out = out+alf2[i];
+                    out = out+alf2[j];
+                    break;
                 }
            
             }
