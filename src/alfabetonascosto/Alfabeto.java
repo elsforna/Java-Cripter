@@ -12,9 +12,9 @@ package alfabetonascosto;
 
 public class Alfabeto {
         //Archivio dell"alfabeto latin -- array di stringhe
-        static final String[] alf1 = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","w","x","y","x"," "};
+        static final String[] alf1 = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "};
         //Archivo lettere alfabeto nuovo -- array di stringhe
-        static final String[] alf2 = {"x","-","_","_-","/-","/_","-_","-_-","/.",".","-./","_.-","..","__","0","_/","0.","/0","$","€","_..","<>","/._","_0.","x.","##"};
+        static final String[] alf2 = {"x","-","_","_-","/-","/_","-_","-_-","/.",".","-./","_.-","..","__","0","_/","0.","/0","$","€","_..","<","<>","/._","_0.","x.","##"};
         
         
         public static void codifica(String inserito){
