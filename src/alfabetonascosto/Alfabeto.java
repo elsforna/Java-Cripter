@@ -32,10 +32,41 @@ public class Alfabeto {
                     //confronta il carattere di inserito in posizione i con ogni posizione di alf1
                     if(inserito.charAt(i) == (char)alf1[j].charAt(0)){
                         //aggiunge alla stringa out la posizione j di alf2
-                        out = out+alf2[j]+"    #    ";
+                        //out = out+alf2[j]+"    #    ";
+                        out = out+alf2[j]+"#";
                         break;
                     }
                 }
+            }  
+            System.out.println(out);
+        }
+        
+        public static void decodifica(String inserito){
+            //dichiarazione di stringhe per output e confronto
+            String out = "";
+            String confronto;
+            
+            //dichiarazione di iteratori i,j
+            int i,j,index;
+            String sub;
+            //ciclo per caratteri di inserito
+            for(i = 0;i<inserito.length();i++){
+            //ciclo per elementi di alf1
+                index = inserito.indexOf('#');
+                //System.out.println(index);
+                sub = inserito.substring(0,index);
+                System.out.println(sub);
+                for(j=0;j<alf1.length;j++){
+                    //confronta il carattere di inserito in posizione i con ogni posizione di alf1
+                    if(sub.equals(alf2[j])){
+                        //aggiunge alla stringa out la posizione j di alf2
+                        //out = out+alf2[j]+"    #    ";
+                        out = out+alf1[j];
+                        break;
+                    }
+                }
+                //inserito = inserito.replace(alf2[i],alf1[i]);
+                inserito = inserito.substring(index+1,inserito.length());
             }  
             System.out.println(out);
         }

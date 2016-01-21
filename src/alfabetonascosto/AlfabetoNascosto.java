@@ -16,6 +16,10 @@ public class AlfabetoNascosto {
         
         
         Alfabeto.codifica(inserito);
+        
+        inserito = inputS("Inserisci la stringa da decodificare:");
+        
+        Alfabeto.decodifica(inserito);
     
     }
     
