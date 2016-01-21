@@ -50,25 +50,33 @@ public class Alfabeto {
             int i,j,index;
             String sub;
             //ciclo per caratteri di inserito
-            for(i = 0;i<inserito.length();i++){
+            while(inserito.length() != 0){
             //ciclo per elementi di alf1
+               // if(inserito.length() != 2){
+                //System.out.println("Strigna: "+inserito+"LEN: "+inserito.length()+"I: "+i+"\n");
                 index = inserito.indexOf('#');
                 //System.out.println(index);
                 sub = inserito.substring(0,index);
-                System.out.println(sub);
-                for(j=0;j<alf1.length;j++){
-                    //confronta il carattere di inserito in posizione i con ogni posizione di alf1
-                    if(sub.equals(alf2[j])){
-                        //aggiunge alla stringa out la posizione j di alf2
-                        //out = out+alf2[j]+"    #    ";
-                        out = out+alf1[j];
-                        break;
+                //System.out.println(sub);
+                
+                    for(j=0;j<alf1.length;j++){
+                        //confronta il carattere di inserito in posizione i con ogni posizione di alf1
+                        if(sub.equals(alf2[j])){
+                            //aggiunge alla stringa out la posizione j di alf2
+                            //out = out+alf2[j]+"    #    ";
+                            out = out+alf1[j];
+                            break;
+                        }
                     }
-                }
-                //inserito = inserito.replace(alf2[i],alf1[i]);
-                inserito = inserito.substring(index+1,inserito.length());
-            }  
+                    //inserito = inserito.replace(alf2[i],alf1[i]);
+                    inserito = inserito.substring(index+1,inserito.length());
+                    //System.out.println(inserito);
+                //} 
+              //System.out.println("Strigna: "+inserito+"LEN: "+inserito.length()+"I: "+i+"\n");
+            
+            }
             System.out.println(out);
-        }
   
+    }
+        
 }
